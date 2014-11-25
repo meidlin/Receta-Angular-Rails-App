@@ -28,6 +28,13 @@ gem 'spring',        group: :development
 
 gem 'bower-rails'
 
+gem 'foreman'
+group :production, :staging do
+  gem "rails_12factor"
+  gem "rails_stdout_logging"
+  gem "rails_serve_static_assets"
+end
+
 group :test, :development do 
 	gem 'rspec-rails', '~> 2.0'
 	gem 'factory_girl_rails', '~> 4.0'
@@ -35,4 +42,6 @@ group :test, :development do
 	gem 'database_cleaner'
 	gem 'selenium-webdriver'
 end
+
+
 	
